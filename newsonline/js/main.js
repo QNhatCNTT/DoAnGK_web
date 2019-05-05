@@ -192,20 +192,12 @@
     /*==================================================================
     [ Play video 01 ]*/
     try {
-        var srcOld = $('.video-mo-01').children('iframe').attr('src');
-
-        $('[data-target="#modal-video-01"]').on('click',function(){
-            $('.video-mo-01').children('iframe')[0].src += "&autoplay=1";
-
-            setTimeout(function(){
-                $('.video-mo-01').css('opacity','1');
-            },300);      
-        });
-
-        $('[data-dismiss="modal"]').on('click',function(){
-            $('.video-mo-01').children('iframe')[0].src = srcOld;
-            $('.video-mo-01').css('opacity','0');
-        });
+        
+        $('#modal1').on('hidden.bs.modal', function (e) {
+            // do something...
+            $('#modal1 iframe').attr("src", $("#modal1 iframe").attr("src"));
+          });
+          
     } catch(er) {console.log(er);}
    
 
