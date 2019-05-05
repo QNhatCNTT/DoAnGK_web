@@ -1868,3 +1868,8 @@ a.breadcrumb-item:hover {
 @media (max-width: 480px) {
   
 }
+
+.breadcrumb{
+  background-color: white !important;
+  border-radius: 0;
+}
